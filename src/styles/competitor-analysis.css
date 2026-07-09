@@ -1,0 +1,258 @@
+/* Competitor Analysis */
+.competitor-analysis {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h2 {
+  font-size: 24px;
+  margin-bottom: 4px;
+  color: #f1f5f9;
+}
+
+.bio {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-stats .stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-stats .stat strong {
+  color: #667eea;
+  font-size: 18px;
+}
+
+.profile-stats .stat {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* RPM Card */
+.rpm-card {
+  grid-column: 1 / -1;
+}
+
+.rpm-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.rpm-item {
+  background: rgba(102, 126, 234, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+.rpm-item label {
+  display: block;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.rpm-item .value {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.rpm-item.highlight {
+  border-left-color: #10b981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.rpm-item.highlight .value {
+  color: #10b981;
+}
+
+.rpm-item .value.large {
+  font-size: 20px;
+}
+
+.earnings-projection {
+  background: rgba(16, 185, 129, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.earnings-projection h4 {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.projection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.projection span:first-child {
+  color: #94a3b8;
+}
+
+.projection .amount {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.uncertainty {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Saturation Card */
+.saturation-gauge {
+  margin-bottom: 16px;
+}
+
+.gauge-bar {
+  width: 100%;
+  height: 24px;
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border: 1px solid #334155;
+}
+
+.gauge-fill {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.gauge-label {
+  text-align: center;
+  font-weight: bold;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.saturation-levels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.level {
+  padding: 4px 8px;
+  background: #1e293b;
+  border-radius: 4px;
+  color: #94a3b8;
+}
+
+.level.low {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.level.medium {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.level.high {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.recommendation {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 14px;
+}
+
+.recommendation[data-type="launch"] {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.recommendation[data-type="consider"] {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.recommendation[data-type="avoid"] {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.saturation-insights {
+  background: rgba(102, 126, 234, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.saturation-insights p {
+  margin-bottom: 8px;
+  color: #94a3b8;
+}
+
+.saturation-insights ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.saturation-insights li {
+  padding: 4px 0;
+  padding-left: 20px;
+  position: relative;
+  color: #cbd5e1;
+}
+
+.saturation-insights li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}

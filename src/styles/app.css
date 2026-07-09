@@ -1,0 +1,128 @@
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 24px 20px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-content h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.header-content .subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Tab Navigation */
+.app-tabs {
+  display: flex;
+  gap: 0;
+  background: #0f172a;
+  border-bottom: 2px solid #334155;
+  overflow-x: auto;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  color: #cbd5e1;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.tab-button.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.tab-button .icon {
+  font-size: 18px;
+}
+
+.tab-button .label {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .tab-button .label {
+    display: inline;
+  }
+}
+
+/* Main Content */
+.app-main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+}
+
+/* Grid Layouts */
+.overview-grid,
+.detailed-grid,
+.comparison-grid,
+.account-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 800px) {
+  .overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .detailed-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* View Selector */
+.view-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.view-btn {
+  padding: 8px 16px;
+  background: #334155;
+  border: none;
+  border-radius: 6px;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover,
+.view-btn.active {
+  background: #667eea;
+  color: white;
+}
